@@ -1,12 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
+import './screen_second.dart';
 import 'package:bloc_access_and_routing/logic/cubit/counter_cubit.dart';
 
 class HomeScreen extends StatefulWidget {
-  HomeScreen({Key key, this.title}) : super(key: key);
+  HomeScreen({Key key, this.title, this.color}) : super(key: key);
 
   final String title;
+  final Color color;
 
   @override
   _HomeScreenState createState() => _HomeScreenState();
@@ -93,6 +95,14 @@ class _HomeScreenState extends State<HomeScreen> {
                 ),
               ],
             ),
+            SizedBox(height: 24,),
+            MaterialButton(
+              onPressed:(){
+              Navigator
+                  .of(context)
+                  .push(MaterialPageRoute(builder: (context) => SecondScreen() ));
+            },
+              child: Text(' GO to Second Page'), )
           ],
         ),
       ),
