@@ -13,15 +13,15 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Flutter Demo',
-      theme: ThemeData(
-        primarySwatch: Colors.blue,
-        visualDensity: VisualDensity.adaptivePlatformDensity,
-      ),
+      // theme: ThemeData(
+      //   primarySwatch: Colors.blue,
+      //   visualDensity: VisualDensity.adaptivePlatformDensity,
+      // ),
       home: BlocProvider<CounterCubit>(
         create: (context) => CounterCubit(),
         child: HomeScreen(
           title: 'Flutter Demo Home Page',
-          color: Color(0xffff0000),),
+          color: Colors.blue,),
       ),
     );
   }

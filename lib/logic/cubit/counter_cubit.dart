@@ -11,4 +11,8 @@ class CounterCubit extends Cubit<CounterState> {
 
   void decrement() => emit(CounterState(
       counterValue: state.counterValue - 1, wasIncremented: false));
+
+  void reset() => emit(CounterState(
+    counterValue: state.counterValue = 0
+  ));
 }
